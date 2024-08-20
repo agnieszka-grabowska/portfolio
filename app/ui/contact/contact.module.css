@@ -1,0 +1,30 @@
+.wrapper {
+  background: var(--primary-gradient);
+  display: grid;
+  justify-content: center;
+  padding: 64px;
+  color: var(--gray);
+}
+
+.wrapper > h2 {
+  font-size: 3rem;
+}
+
+.iconsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-block-start: 16px;
+}
+
+.icon {
+  color: var(--gray);
+  font-size: 3rem;
+  transition: transform 300ms;
+  will-change: transform;
+}
+
+.icon:hover {
+  transition: transform 100ms ease-in;
+  transform: rotate(-5deg) scale(1.1);
+}
