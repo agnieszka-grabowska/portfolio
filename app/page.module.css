@@ -1,3 +1,5 @@
 .main {
-  overflow: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }

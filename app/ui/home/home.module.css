@@ -2,15 +2,19 @@
   padding-block-start: 200px;
   padding-block-end: 128px;
   max-width: 1000px;
-  margin: auto;
   text-align: center;
-  display: grid;
-  grid-template-columns: 30% 70%;
+  display: flex;
+  flex-wrap: wrap-reverse;
   gap: 12px;
+  align-self: center;
+  align-items: center;
 }
 
 .imageWrapper {
   animation: fadeinImage 700ms 100ms both;
+  flex: 3 1 0;
+  min-width: 200px;
+  margin-block-start: 40px;
 }
 
 @keyframes fadeinImage {
@@ -30,14 +34,20 @@
   object-fit: cover;
   border: 16px solid white;
   transition: transform 500ms;
+  margin: auto;
 }
 
 .image:hover {
   transform: scale(1.1) rotate(-2deg);
 }
 
+.textWrapper {
+  flex: 5 1 0;
+  min-width: 300px;
+}
+
 .textWrapper > h1 {
-  font-size: 4.375rem;
+  font-size: clamp(2.5rem, 6vw, 4.375rem);
   padding-bottom: 16px;
   background: var(--primary-gradient);
   background-clip: text;

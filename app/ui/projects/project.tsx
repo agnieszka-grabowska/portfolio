@@ -4,7 +4,7 @@ import { IconType } from "react-icons";
 import styles from "./projects.module.css";
 import Link from "next/link";
 
-export type ProjectIcon = { icon: IconType; hoverColor: string };
+export type ProjectIcon = { icon: IconType; hoverColor: string; title: string };
 
 export default function ProjectCard({
   src,
@@ -30,8 +30,8 @@ export default function ProjectCard({
           <h3>{title}</h3>
           <p>{description}</p>
           <div className={styles.icons}>
-            {icons.map(({ icon, hoverColor }, index) => (
-              <AnimatedIcon key={index} icon={icon} hoverColor={hoverColor}></AnimatedIcon>
+            {icons.map((icon, index) => (
+              <AnimatedIcon key={index} icon={icon}></AnimatedIcon>
             ))}
           </div>
         </div>
@@ -43,9 +43,9 @@ export default function ProjectCard({
   );
 }
 
-function AnimatedIcon({ icon: Icon, hoverColor }: { icon: IconType; hoverColor: string }) {
+function AnimatedIcon({ icon: { icon: Icon, hoverColor, title } }: { icon: ProjectIcon }) {
   return (
-    <div className={styles.iconWrapper}>
+    <div className={styles.iconWrapper} title={title}>
       <Icon className={styles.icon} />
       <Icon className={styles.iconColor} style={{ "--hoverColor": hoverColor } as CSSProperties} />
     </div>
