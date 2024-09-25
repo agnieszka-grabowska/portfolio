@@ -1,7 +1,7 @@
 "use client";
-import yookosPhoto from "@/public/yookos.png";
-import tetrisPhoto from "@/public/tetris.png";
-import portfolioPhoto from "@/public/portfolio.png";
+import yookosPhoto from "@/public/yookos.avif";
+import tetrisPhoto from "@/public/tetris.avif";
+import jetlagPhoto from "@/public/jetlag-poznan.avif";
 import styles from "./projects.module.css";
 import Project from "./project";
 import {
@@ -72,7 +72,7 @@ function Portfolio() {
       title="My Portfolio"
       href=""
       description="A personal portfolio site built with Next.js to showcase my projects and skills, demonstrating proficiency in modern web development practices, including React and CSS."
-      src={portfolioPhoto}
+      src={jetlagPhoto}
       alt=""
       icons={[
         { icon: TbBrandNextjs, hoverColor: "#a4a4a4", title: "Next.js" },

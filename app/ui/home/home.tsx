@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./home.module.css";
-import photo from "@/public/photo.webp";
+import photo from "@/public/photo.avif";
 import useObserver from "../useObserver";
 
 export default function HomeSection() {
