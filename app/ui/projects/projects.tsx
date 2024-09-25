@@ -21,8 +21,8 @@ export default function ProjectsSection() {
 
   return (
     <section className={styles.projects} id="projects" ref={projectsRef}>
+      <Jetlag />
       <Tetris />
-      <Portfolio />
       <Yookos />
     </section>
   );
@@ -66,21 +66,23 @@ function Tetris() {
   );
 }
 
-function Portfolio() {
+function Jetlag() {
   return (
     <Project
-      title="My Portfolio"
-      href=""
-      description="A personal portfolio site built with Next.js to showcase my projects and skills, demonstrating proficiency in modern web development practices, including React and CSS."
+      title="Jetlag Poznań"
+      href="https://jetlag-poznan.vercel.app"
+      description="An application providing an interface to play the Jetlag game, where you can create teams, ask questions, and cast curses."
       src={jetlagPhoto}
       alt=""
       icons={[
         { icon: TbBrandNextjs, hoverColor: "#a4a4a4", title: "Next.js" },
         { icon: TbBrandTypescript, hoverColor: "#3178c6", title: "TypeScript" },
         { icon: TbBrandCss3, hoverColor: "#264DE4", title: "CSS3" },
+        { icon: TbBrandHtml5, hoverColor: "#E34F26", title: "HTML5" },
         { icon: TbBrandGit, hoverColor: "#f14e32", title: "Git" },
       ]}
-      titleGradient={"var(--primary-gradient"}
+      titleGradient={"var(--jetlag-gradient"}
+      underDevelopment={true}
     />
   );
 }

@@ -1,0 +1,19 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  place-content: center;
+  display: grid;
+  pointer-events: none;
+}
+
+.banner {
+  background-color: red;
+  color: #fff;
+  transform: rotate(20deg);
+  padding: 16px;
+  font-weight: 700;
+  font-size: 2rem;
+}

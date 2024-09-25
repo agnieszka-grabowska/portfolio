@@ -3,6 +3,7 @@ import { CSSProperties } from "react";
 import { IconType } from "react-icons";
 import styles from "./projects.module.css";
 import Link from "next/link";
+import UnderDevelopment from "../components/UnderDevelopment/UnderDevelopment";
 
 export type ProjectIcon = { icon: IconType; hoverColor: string; title: string };
 
@@ -14,6 +15,7 @@ export default function ProjectCard({
   alt,
   titleGradient,
   href,
+  underDevelopment,
 }: {
   src: StaticImageData;
   icons: Array<ProjectIcon>;
@@ -22,6 +24,7 @@ export default function ProjectCard({
   alt: string;
   titleGradient: string;
   href: string;
+  underDevelopment?: boolean;
 }) {
   return (
     <Link href={href} target="_blank" style={{ "--gradient": titleGradient } as CSSProperties}>
@@ -38,6 +41,7 @@ export default function ProjectCard({
         <div className={styles.imageWrapper}>
           <Image src={src} alt={alt}></Image>
         </div>
+        {underDevelopment && <UnderDevelopment />}
       </article>
     </Link>
   );
