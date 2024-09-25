@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./home.module.css";
 import photo from "@/public/photo.avif";
 import useObserver from "../useObserver";
+import { pacifico } from "../fonts";
 
 export default function HomeSection() {
   const ref = useObserver("home");
@@ -11,7 +12,10 @@ export default function HomeSection() {
   return (
     <section className={styles.sectionWrapper} id="home" ref={ref}>
       <div className={styles.imageWrapper}>
-        <Image src={photo} alt="Me sitting on a wooden platform" className={styles.image}></Image>
+        <div className={styles.imageBorder}>
+          <Image src={photo} alt="Me sitting on a wooden platform" className={styles.image} />
+          <p className={pacifico.className}>Gamcheon, Busan, South Korea</p>
+        </div>
       </div>
       <div className={styles.textWrapper}>
         <h1>Hi, I&apos;m Agnieszka</h1>
