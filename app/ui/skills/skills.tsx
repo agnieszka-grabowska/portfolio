@@ -6,6 +6,7 @@ export default function SkillsSection() {
       <h2>Skills</h2>
       <ul className={styles.skills}>
         <Skill>ReactJS</Skill>
+        <Skill>NextJS</Skill>
         <Skill>TypeScript</Skill>
         <Skill>CSS</Skill>
         <Skill>HTML</Skill>
