@@ -1,7 +1,7 @@
 "use client";
 import yookosPhoto from "@/public/yookos.avif";
 import tetrisPhoto from "@/public/tetris.avif";
-import jetlagPhoto from "@/public/jetlag-poznan.avif";
+import jetlagPhoto from "@/public/jetlag-game-view.avif";
 import styles from "./projects.module.css";
 import Project from "./project";
 import {
@@ -69,9 +69,9 @@ function Tetris() {
 function Jetlag() {
   return (
     <Project
-      title="Jetlag Poznań"
+      title="Jet Lag Poznań"
       href="https://jetlag-poznan.vercel.app"
-      description="An application providing an interface to play the Jetlag game, where you can create teams, ask questions, and cast curses."
+      description="An application providing an interface to play the Jet Lag game, where you can create teams, ask questions, and cast curses."
       src={jetlagPhoto}
       alt=""
       icons={[

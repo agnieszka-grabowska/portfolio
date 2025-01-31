@@ -7,11 +7,13 @@ export default function useObserver(tab: Tab) {
 
   React.useEffect(() => {
     function callback(entries: IntersectionObserverEntry[]) {
-      if (entries[0].isIntersecting) {
-        setCurrentTab(tab);
-      }
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0.5) {
+          setCurrentTab(tab);
+        }
+      });
     }
-    let observer = new IntersectionObserver(callback, { threshold: 0.2 });
+    let observer = new IntersectionObserver(callback, { threshold: [0.25, 0.5, 0.75, 1] });
 
     if (ref.current !== null) {
       observer.observe(ref.current);

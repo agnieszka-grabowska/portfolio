@@ -1,86 +1,23 @@
 .sectionWrapper {
-  padding-block-start: 200px;
-  padding-block-end: 128px;
-  max-width: 1000px;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap-reverse;
-  gap: 12px;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
 }
 
-.imageWrapper {
-  animation: fadeinImage 700ms 100ms both;
-  flex: 3 1 0;
-  min-width: 200px;
-  margin-block-start: 40px;
-  max-width: max-content;
+@media (max-width: 790px) {
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-@keyframes fadeinImage {
-  from {
-    opacity: 0;
-    transform: scale(0.9) rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(-10deg);
-  }
+.contentWrapper {
+  margin: auto;
+  padding: 40px 16px;
+  max-width: 27.5rem;
 }
 
 .image {
-  width: calc(400px - 32px);
-  height: calc(300px - 32px);
   object-fit: cover;
-}
-
-.imageBorder {
-  background-color: white;
-  padding: 16px;
-  transition: transform 500ms;
-  will-change: transform;
-}
-
-.imageBorder:hover {
-  transform: scale(1.1) rotate(-2deg);
-}
-
-.imageBorder p {
-  padding-block-start: 12px;
-  font-weight: 500;
-  color: hsl(239, 69%, 36%);
-}
-
-.textWrapper {
-  flex: 5 1 0;
-  min-width: 300px;
-}
-
-.textWrapper > h1 {
-  font-size: clamp(2.5rem, 6vw, 4.375rem);
-  padding-bottom: 16px;
-  background: var(--primary-gradient);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadein 500ms both;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-.textWrapper > p {
-  max-width: 90%;
-  font-size: 1.125rem;
-  margin: auto;
-  animation: fadein 500ms;
+  height: 100%;
+  filter: opacity(0.9);
 }

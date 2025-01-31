@@ -1,5 +1,5 @@
 .wrapper {
-  background: var(--primary-gradient);
+  background: var(--main);
   display: grid;
   justify-content: center;
   padding: 64px;

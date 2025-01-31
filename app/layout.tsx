@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { poppins } from "@/app/ui/fonts";
+import { onest } from "@/app/ui/fonts";
 import "./globals.css";
 import Navigation from "./ui/navigation/navigation";
 import TabProvider from "./ui/tabProvider";
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={onest.className}>
         <TabProvider>
           <Navigation />
           {children}

@@ -1,19 +1,23 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export type Tab = "home" | "projects" | "contact";
 
 export const TabContext = React.createContext<
   | {
-      currentTab: Tab;
-      setCurrentTab: React.Dispatch<React.SetStateAction<Tab>>;
+      currentTab: Tab | null;
+      setCurrentTab: React.Dispatch<React.SetStateAction<Tab | null>>;
     }
   | undefined
 >(undefined);
 
 export default function TabProvider({ children }: { children: React.ReactNode }) {
-  const [currentTab, setCurrentTab] = React.useState<Tab>("home");
+  const pathname = usePathname();
+  const [currentTab, setCurrentTab] = React.useState<Tab | null>(() =>
+    pathname === "/" ? "home" : null
+  );
 
   return (
     <TabContext.Provider value={{ currentTab, setCurrentTab }}>{children}</TabContext.Provider>

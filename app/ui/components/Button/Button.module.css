@@ -1,0 +1,35 @@
+.button {
+  font-size: 1rem;
+  border: none;
+  display: flex;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 16px 6px;
+  cursor: pointer;
+  transition: background-color 200ms;
+  text-transform: uppercase;
+  min-height: 40px;
+  color: #f4f4f4;
+  background-color: var(--main);
+
+  &:hover {
+    background-color: hsl(270, 100%, 45%);
+    transition: background-color 0ms;
+  }
+}
+
+.iconButton {
+  background-color: transparent;
+  padding: 4px;
+  aspect-ratio: 1 /1;
+  border: var(--main) solid 2px;
+  color: var(--main);
+
+  &:hover {
+    background-color: hsla(270, 100%, 45%, 0.18);
+  }
+}
