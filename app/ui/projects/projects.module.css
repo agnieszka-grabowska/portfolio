@@ -89,4 +89,5 @@
   font-weight: bold;
   font-size: 1.125rem;
   padding-top: 20px;
+  color: var(--main);
 }
