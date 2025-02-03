@@ -252,9 +252,9 @@ export default function Content() {
         zone while I was distracted by another team!
       </p>
       <p>
-        The challenge is that, despite tracking users' locations, it would require implementing
-        pre-set zones (limiting the app's flexibility) or allowing users to create map zones within
-        the app, which sounds complex. But it's something I'd love to explore in the future. For
+        The challenge is that, despite tracking users’ locations, it would require implementing
+        pre-set zones (limiting the app’s flexibility) or allowing users to create map zones within
+        the app, which sounds complex. But it’s something I’d love to explore in the future. For
         now, though, hiders will just have to stay on their toes! 😅
       </p>
       <h3>Tests</h3>
