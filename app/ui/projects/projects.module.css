@@ -84,3 +84,9 @@
 .iconWrapper:hover .iconColor {
   clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
 }
+
+.readMore {
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding-top: 20px;
+}

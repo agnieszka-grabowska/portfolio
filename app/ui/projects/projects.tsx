@@ -70,7 +70,7 @@ function Jetlag() {
   return (
     <Project
       title="Jet Lag Poznań"
-      href="https://jetlag-poznan.vercel.app"
+      href="/projects/jetlag"
       description="An application providing an interface to play the Jet Lag game, where you can create teams, ask questions, and cast curses."
       src={jetlagPhoto}
       alt=""
@@ -82,7 +82,7 @@ function Jetlag() {
         { icon: TbBrandGit, hoverColor: "#f14e32", title: "Git" },
       ]}
       titleGradient={"var(--jetlag-gradient"}
-      underDevelopment={true}
+      detailsPageExists={true}
     />
   );
 }

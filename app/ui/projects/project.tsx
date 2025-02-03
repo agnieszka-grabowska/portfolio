@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import { CSSProperties } from "react";
 import { IconType } from "react-icons";
 import styles from "./projects.module.css";
-import UnderDevelopment from "../components/UnderDevelopment/UnderDevelopment";
+import Link from "next/link";
 
 export type ProjectIcon = { icon: IconType; hoverColor: string; title: string };
 
@@ -14,7 +14,7 @@ export default function ProjectCard({
   alt,
   titleGradient,
   href,
-  underDevelopment,
+  detailsPageExists,
 }: {
   src: StaticImageData;
   icons: Array<ProjectIcon>;
@@ -23,14 +23,15 @@ export default function ProjectCard({
   alt: string;
   titleGradient: string;
   href: string;
-  underDevelopment?: boolean;
+  detailsPageExists?: boolean;
 }) {
   return (
-    <a href={href} target="_blank" style={{ "--gradient": titleGradient } as CSSProperties}>
+    <Link href={href} target="_blank" style={{ "--gradient": titleGradient } as CSSProperties}>
       <article className={styles.project}>
         <div className={styles.textWrapper}>
           <h3>{title}</h3>
           <p>{description}</p>
+          {detailsPageExists && <p className={styles.readMore}>Read project details {">"}</p>}
           <div className={styles.icons}>
             {icons.map((icon, index) => (
               <AnimatedIcon key={index} icon={icon}></AnimatedIcon>
@@ -40,9 +41,8 @@ export default function ProjectCard({
         <div className={styles.imageWrapper}>
           <Image src={src} alt={alt}></Image>
         </div>
-        {underDevelopment && <UnderDevelopment />}
       </article>
-    </a>
+    </Link>
   );
 }
 
