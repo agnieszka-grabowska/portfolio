@@ -95,12 +95,17 @@
     flex-direction: column;
   }
 
-  & li {
+  & a {
     padding-block: 8px;
+    display: block;
   }
 
   & li:not(:last-child) {
     border-bottom: #dcdcdc 1px solid;
+  }
+
+  & a:hover {
+    color: var(--main);
   }
 }
 
@@ -132,6 +137,10 @@
 
   & h2:not(:first-child) {
     padding-block-start: 80px;
+  }
+
+  & h2:first-child {
+    scroll-margin-block: 120px;
   }
 
   & h3 {

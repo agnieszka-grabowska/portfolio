@@ -15,7 +15,7 @@ import Flex from "@/app/ui/components/Flex/Flex";
 export default function Content() {
   return (
     <div className={styles.content}>
-      <h2>Before the App</h2>
+      <h2 id="before-app">Before the App</h2>
       <p>
         Every Wednesday, my boyfriend and I would watch the{" "}
         <a href="https://nebula.tv/jetlag">Jet Lag show</a> created by Ben, Sam, and Adam, in which
@@ -54,7 +54,7 @@ export default function Content() {
         So I realized <strong>we needed our own app</strong>, and it was my chance to{" "}
         <span style={{ color: "#d3b039", fontWeight: 600 }}>shine</span>! ✨
       </p>
-      <h2>Tech Stack</h2>
+      <h2 id="tech-stack">Tech Stack</h2>
       <p>
         This project was built with <Span>Next.js</Span> paired with <Span>TypeScript</Span>, as it
         allows the creation of full-stack applications easily and provides cutting-edge{" "}
@@ -69,7 +69,7 @@ export default function Content() {
         communicate with my database, I used <Span>Prisma</Span>
       </p>
 
-      <h2>The Before-The-App Issues Solved by The App</h2>
+      <h2 id="solved-issues">The Before-The-App Issues Solved by The App</h2>
       <h3>Time Synchronization</h3>
       <p>
         Before the app, we measured round time by sending <Span>START</Span> or <Span>STOP</Span>{" "}
@@ -140,7 +140,7 @@ export default function Content() {
         It also prevents errors, as the app won’t let hiders roll more dice than they can afford,
         unlike physical dice where mistakes could happen. Everything is seamless within the app!
       </p>
-      <h2>Key Features</h2>
+      <h2 id="key-features">Key Features</h2>
       <h3>Push Notifications</h3>
       <p>
         When we were using Telegram, we relied on notifications for every message, even the
@@ -195,7 +195,9 @@ export default function Content() {
         a must-have, but it’s a nice touch.
       </p>
       <Image src={loadingPhoto} alt="" height={667} />
-      <h2>Reflection & Improvements After the First Iteration </h2>
+      <h2 id="reflections-and-improvements">
+        Reflections & Improvements After the First Iteration{" "}
+      </h2>
       <h3>Streamlining the Game Screen</h3>
       <p>
         In the first version, the game screen had everything in one place—questions, curses, teams,
@@ -243,7 +245,7 @@ export default function Content() {
         (and only the cursed team gets that notification). If players want to see all the details,
         they can still check the curses tab, but they won’t be bombarded with notifications.
       </p>
-      <h2>Future Ideas </h2>
+      <h2 id="future-ideas">Future Ideas </h2>
       <h3>Map & Location Tracking</h3>
       <p>
         I’m excited about adding map and location tracking. When a seeker enters a hider’s zone, the
