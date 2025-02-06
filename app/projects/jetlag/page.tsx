@@ -4,6 +4,7 @@ import Slide from "./components/Slide";
 import Title from "./components/Title";
 import Content from "./components/Content";
 import TableOfContents from "./components/TableOfContents";
+import SectionProvider from "./SectionProvider";
 
 export default function JetLagDetailsPage() {
   return (
@@ -11,8 +12,10 @@ export default function JetLagDetailsPage() {
       <main className={styles.main}>
         <Title />
         <Slide />
-        <TableOfContents />
-        <Content />
+        <SectionProvider>
+          <TableOfContents />
+          <Content />
+        </SectionProvider>
       </main>
       <ContactSection />
     </>

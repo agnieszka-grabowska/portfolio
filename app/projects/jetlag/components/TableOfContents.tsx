@@ -1,30 +1,19 @@
 import styles from "../page.module.css";
+import Item from "./Item";
 
 export default function TableOfContents() {
   return (
     <div className={styles.tableOfContent}>
       <p>Table of Contents</p>
       <ol>
-        <li>
-          <a href="#before-app">Before the App</a>
-        </li>
-        <li>
-          <a href="#tech-stack">Tech Stack</a>
-        </li>
-        <li>
-          <a href="#solved-issues">The Before-The-App Issues Solved by The App</a>
-        </li>
-        <li>
-          <a href="#key-features">Key Features</a>
-        </li>
-        <li>
-          <a href="#reflections-and-improvements">
-            Reflections & Improvements After the First Iteration
-          </a>
-        </li>
-        <li>
-          <a href="#future-ideas">Future Ideas</a>
-        </li>
+        <Item id="before-app">Before the App</Item>
+        <Item id="tech-stack">Tech Stack</Item>
+        <Item id="solved-issues">The Before-The-App Issues Solved by The App</Item>
+        <Item id="key-features">Key Features</Item>
+        <Item id="reflections-and-improvements">
+          Reflections & Improvements After the First Iteration
+        </Item>
+        <Item id="future-ideas">Future Ideas</Item>
       </ol>
     </div>
   );

@@ -98,6 +98,13 @@
   & a {
     padding-block: 8px;
     display: block;
+    transition: transform 200ms;
+  }
+
+  & a[class="active"] {
+    color: var(--main);
+    font-weight: 700;
+    transform: translateX(8px);
   }
 
   & li:not(:last-child) {
