@@ -9,19 +9,18 @@
 
 .project {
   max-width: 900px;
-  background-color: white;
+  background-color: var(--bg-card);
   border-radius: 16px;
   padding: 16px;
   gap: 32px;
   display: flex;
   flex-wrap: wrap;
-  transition: all 600ms;
+  transition: box-shadow 500ms, transform 500ms;
   will-change: transform;
 }
 
 .project:hover {
-  transition: all 200ms;
-  --shadow-color: 0deg 0% 74%;
+  transition: box-shadow 200ms, transform 200ms;
   box-shadow: 0.2px 0.3px hsl(var(--shadow-color) / 0),
     0px 1.4px 2.1px hsl(var(--shadow-color) / 0.07),
     0.1px 2.4px 3.6px hsl(var(--shadow-color) / 0.14),
@@ -67,6 +66,7 @@
   font-size: 40px;
   display: flex;
   gap: 4px;
+  color: var(--text-secondary);
 }
 
 .iconWrapper {

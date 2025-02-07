@@ -2,6 +2,7 @@
   text-transform: uppercase;
   align-self: center;
   justify-self: center;
+  color: var(--text-primary);
 }
 
 @media (max-width: 790px) {
@@ -22,14 +23,13 @@
 }
 
 .current {
-  color: #1f1f1f;
   font-weight: 700;
 }
 
 .underline {
   height: 3px;
   border-radius: 10px;
-  background-color: #1f1f1f;
+  background-color: var(--text-primary);
   position: absolute;
   left: 0;
   right: 0;

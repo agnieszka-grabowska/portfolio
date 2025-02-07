@@ -21,9 +21,18 @@
 
   --jetlag-gradient: linear-gradient(45deg, hsl(144, 73%, 40%) 0%, hsl(219, 83%, 50%) 100%);
 
-  --gray: #f6f6f6;
-  --lighterBlack: #373737;
+  --light-mode-background: #f6f6f6;
+
   --main: #4177ba;
+
+  --background: var(--light-mode-background);
+  --text-primary: #242424;
+  --text-secondary: #373737;
+  --nav-border: #e1e1e1;
+  --bg-card: #ffffff;
+  --shadow-color: 0deg 0% 74%;
+  --nav-header: #b1b1b1;
+  --bg-span: #d8e5f5;
 }
 
 /*
@@ -41,7 +50,7 @@
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--gray);
+  background-color: var(--background);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

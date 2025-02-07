@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { onest } from "@/app/ui/fonts";
+
 import "./globals.css";
 import Navigation from "./ui/navigation/navigation";
 import TabProvider from "./ui/tabProvider";
+import ThemeProvider from "./providers/ThemeProvider";
+import Body from "./ui/components/Body/Body";
 
 export const metadata: Metadata = {
   title: "Agnieszka Grabowska",
@@ -17,12 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={onest.className}>
-        <TabProvider>
-          <Navigation />
-          {children}
-        </TabProvider>
-      </body>
+      <ThemeProvider>
+        <Body>
+          <TabProvider>
+            <Navigation />
+            {children}
+          </TabProvider>
+        </Body>
+      </ThemeProvider>
     </html>
   );
 }

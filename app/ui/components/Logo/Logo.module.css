@@ -1,0 +1,6 @@
+.logo {
+  font-size: 1.25rem;
+  line-height: 1;
+  word-break: break-all;
+  color: var(--text-primary);
+}

@@ -1,5 +1,5 @@
 .h1 {
   font-size: clamp(1.25rem, 10vw, 2.75rem);
   font-weight: bold;
-  color: #242424;
+  color: var(--text-primary);
 }

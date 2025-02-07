@@ -1,0 +1,10 @@
+.dark {
+  --background: #202020;
+  --text-primary: #cdcdcd;
+  --text-secondary: #bfbfbf;
+  --nav-border: #3e3e3e;
+  --bg-card: #303030;
+  --shadow-color: 0, 0%, 0%;
+  --nav-header: #6e6e6e;
+  --bg-span: #162d49;
+}

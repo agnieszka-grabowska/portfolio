@@ -3,6 +3,7 @@ import { CSSProperties } from "react";
 import { IconType } from "react-icons";
 import styles from "./projects.module.css";
 import Link from "next/link";
+import Paragraph from "../components/Paragraph/Paragraph";
 
 export type ProjectIcon = { icon: IconType; hoverColor: string; title: string };
 
@@ -30,7 +31,7 @@ export default function ProjectCard({
       <article className={styles.project}>
         <div className={styles.textWrapper}>
           <h3>{title}</h3>
-          <p>{description}</p>
+          <Paragraph>{description}</Paragraph>
           {detailsPageExists && <p className={styles.readMore}>Read project details {">"}</p>}
           <div className={styles.icons}>
             {icons.map((icon, index) => (

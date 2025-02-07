@@ -4,7 +4,7 @@
   align-items: center;
   background: var(--main);
   padding: 40px;
-  color: var(--gray);
+  color: var(--light-mode-background);
 }
 
 .wrapper > h2 {
