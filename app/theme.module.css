@@ -1,0 +1,21 @@
+.dark {
+  --background: #202020;
+  --text-primary: #cdcdcd;
+  --text-secondary: #bfbfbf;
+  --nav-border: #3e3e3e;
+  --bg-card: #303030;
+  --shadow-color: 0, 0%, 0%;
+  --nav-header: #6e6e6e;
+  --bg-span: #162d49;
+}
+
+.light {
+  --background: var(--light-mode-background);
+  --text-primary: #242424;
+  --text-secondary: #373737;
+  --nav-border: #e1e1e1;
+  --bg-card: #ffffff;
+  --shadow-color: 0deg 0% 74%;
+  --nav-header: #b1b1b1;
+  --bg-span: #d8e5f5;
+}

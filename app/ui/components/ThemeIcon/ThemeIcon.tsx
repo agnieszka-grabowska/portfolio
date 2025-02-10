@@ -1,20 +1,15 @@
-"use client";
-
-import { useThemeContext } from "@/app/providers/ThemeProvider";
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
-import styles from "./ThemeIcon.module.css";
+import { getThemeCookie } from "../../../actions";
+import ThemeIconButton from "./ThemeIconButton";
 
-export default function ThemeIcon() {
-  const { theme, setTheme } = useThemeContext();
+export default async function ThemeIcon() {
+  const theme = await getThemeCookie();
   const size = 24;
 
   return (
-    <button
-      className={styles.iconWrapper}
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-    >
+    <ThemeIconButton>
       {theme === "dark" ? <MdLightMode size={size} /> : <MdDarkMode size={size} />}
-    </button>
+    </ThemeIconButton>
   );
 }

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "./ui/navigation/navigation";
 import TabProvider from "./ui/tabProvider";
-import ThemeProvider from "./providers/ThemeProvider";
 import Body from "./ui/components/Body/Body";
 
 export const metadata: Metadata = {
@@ -19,14 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <Body>
-          <TabProvider>
-            <Navigation />
-            {children}
-          </TabProvider>
-        </Body>
-      </ThemeProvider>
+      <Body>
+        <TabProvider>
+          <Navigation />
+          {children}
+        </TabProvider>
+      </Body>
     </html>
   );
 }

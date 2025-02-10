@@ -24,15 +24,6 @@
   --light-mode-background: #f6f6f6;
 
   --main: #4177ba;
-
-  --background: var(--light-mode-background);
-  --text-primary: #242424;
-  --text-secondary: #373737;
-  --nav-border: #e1e1e1;
-  --bg-card: #ffffff;
-  --shadow-color: 0deg 0% 74%;
-  --nav-header: #b1b1b1;
-  --bg-span: #d8e5f5;
 }
 
 /*
