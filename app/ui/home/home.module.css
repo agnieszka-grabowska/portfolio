@@ -9,6 +9,14 @@
     display: flex;
     flex-direction: column;
   }
+
+  .contentWrapper {
+    text-align: center;
+
+    & > div > div:nth-child(2) {
+      justify-content: center;
+    }
+  }
 }
 .contentWrapper {
   margin: auto;
