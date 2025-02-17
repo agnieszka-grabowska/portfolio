@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 
 export async function getThemeCookie() {
-  return cookies().get("theme")?.value;
+  return cookies().get("theme")?.value ?? "light";
 }
 
 export async function toggleThemeCookie() {
