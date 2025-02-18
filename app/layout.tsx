@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "./ui/navigation/navigation";
 import TabProvider from "./ui/tabProvider";
 import Body from "./ui/components/Body/Body";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Agnieszka Grabowska",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Navigation />
           {children}
         </TabProvider>
+        <Analytics />
       </Body>
     </html>
   );
