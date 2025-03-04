@@ -14,14 +14,23 @@ export default function Button({ icon: Icon, href, onClick, ...rest }: Props) {
 
   if (href) {
     return (
-      <a href={href} className={style} target="_blank">
+      <a
+        href={href}
+        className={style}
+        target="_blank"
+        {...(rest as React.HTMLAttributes<HTMLAnchorElement>)}
+      >
         {children}
       </a>
     );
   }
 
   return (
-    <button onClick={onClick} className={style}>
+    <button
+      onClick={onClick}
+      className={style}
+      {...(rest as React.HTMLAttributes<HTMLButtonElement>)}
+    >
       {children}
     </button>
   );

@@ -10,7 +10,11 @@ export default function ThemeIconButton({ theme }: { theme: string }) {
   const size = 24;
 
   return (
-    <button className={styles.iconWrapper} onClick={() => toggleThemeCookie()}>
+    <button
+      className={styles.iconWrapper}
+      onClick={() => toggleThemeCookie()}
+      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+    >
       <AnimatePresence initial={false} mode="popLayout">
         {theme === "dark" ? (
           <AnimatedIcon theme="light">
