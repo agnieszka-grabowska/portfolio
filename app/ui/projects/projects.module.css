@@ -52,7 +52,8 @@
 }
 
 .textWrapper > h3 {
-  font-size: 3rem;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  line-height: 1.2;
   background: var(--gradient);
   background-clip: text;
   color: transparent;

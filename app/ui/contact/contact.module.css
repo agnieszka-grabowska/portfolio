@@ -2,12 +2,13 @@
   background: var(--main);
   display: grid;
   justify-content: center;
-  padding: 64px;
+  padding: 64px 32px;
   color: var(--light-mode-background);
 }
 
 .wrapper > h2 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  text-align: center;
 }
 
 .iconsWrapper {
