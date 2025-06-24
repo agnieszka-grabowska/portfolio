@@ -4,6 +4,7 @@ import { IconType } from "react-icons";
 import styles from "./projects.module.css";
 import Link from "next/link";
 import Paragraph from "../components/Paragraph/Paragraph";
+import { SiPrismic } from "react-icons/si";
 
 export type ProjectIcon = { icon: IconType; hoverColor: string; title: string };
 
@@ -49,7 +50,15 @@ export default function ProjectCard({
 
 function AnimatedIcon({ icon: { icon: Icon, hoverColor, title } }: { icon: ProjectIcon }) {
   return (
-    <div className={styles.iconWrapper} title={title}>
+    <div
+      className={styles.iconWrapper}
+      title={title}
+      style={{
+        // Adjusted size to match Tb icons
+        fontSize: Icon === SiPrismic ? "32px" : "40px",
+        margin: Icon === SiPrismic ? "4px" : "0px",
+      }}
+    >
       <Icon className={styles.icon} />
       <Icon className={styles.iconColor} style={{ "--hoverColor": hoverColor } as CSSProperties} />
     </div>

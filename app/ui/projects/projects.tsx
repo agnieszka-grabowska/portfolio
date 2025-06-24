@@ -1,6 +1,7 @@
 "use client";
 import yookosPhoto from "@/public/yookos.avif";
 import tetrisPhoto from "@/public/tetris.avif";
+import chillPhoto from "@/public/dance-school-chill.avif";
 import jetlagPhoto from "@/public/jetlag-game-view.avif";
 import styles from "./projects.module.css";
 import Project from "./project";
@@ -13,7 +14,9 @@ import {
   TbBrandReact,
   TbBrandFigma,
   TbBrandNextjs,
+  TbBrandPrisma,
 } from "react-icons/tb";
+import { SiPrismic } from "react-icons/si";
 import useObserver from "../useObserver";
 
 export default function ProjectsSection() {
@@ -21,10 +24,31 @@ export default function ProjectsSection() {
 
   return (
     <section className={styles.projects} id="projects" ref={projectsRef}>
+      <DanceSchoolChill />
       <Jetlag />
       <Tetris />
       <Yookos />
     </section>
+  );
+}
+
+function DanceSchoolChill() {
+  return (
+    <Project
+      title="Dance School Chill"
+      href="https://szkola-tanca-chill.vercel.app"
+      description="Landing page for a dance school, featuring information about classes, instructor, and contact details."
+      src={chillPhoto}
+      alt=""
+      icons={[
+        { icon: TbBrandNextjs, hoverColor: "#a4a4a4", title: "Next.js" },
+        { icon: TbBrandTypescript, hoverColor: "#3178c6", title: "TypeScript" },
+        { icon: TbBrandCss3, hoverColor: "#264DE4", title: "CSS3" },
+        { icon: TbBrandHtml5, hoverColor: "#E34F26", title: "HTML5" },
+        { icon: SiPrismic, hoverColor: "#8e44ec", title: "Prismic" },
+      ]}
+      titleGradient={"var(--chill-gradient"}
+    />
   );
 }
 
@@ -79,6 +103,7 @@ function Jetlag() {
         { icon: TbBrandTypescript, hoverColor: "#3178c6", title: "TypeScript" },
         { icon: TbBrandCss3, hoverColor: "#264DE4", title: "CSS3" },
         { icon: TbBrandHtml5, hoverColor: "#E34F26", title: "HTML5" },
+        { icon: TbBrandPrisma, hoverColor: "#16a394", title: "Prisma" },
         { icon: TbBrandGit, hoverColor: "#f14e32", title: "Git" },
       ]}
       titleGradient={"var(--jetlag-gradient"}
