@@ -7,7 +7,7 @@ import Body from "./ui/components/Body/Body";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Agnieszka Grabowska",
+  title: "Agnieszka Grabowska | Portfolio",
   description:
     "Portfolio of an aspiring React developer showcasing projects, expertise in JavaScript, React, and modern web development. Explore my work and skills.",
 };
