@@ -12,7 +12,7 @@ export default function Title() {
         My First Full-Stack App
       </h1>
       <Flex justifyContent="center" gap="16px">
-        <Button href="https://github.com/Areszka/jetlag-poznan">Github</Button>
+        <Button href="https://github.com/agnieszka-grabowska/jetlag-poznan">Github</Button>
         <Button href="https://jetlag-poznan.vercel.app">Live Demo</Button>
       </Flex>
     </div>

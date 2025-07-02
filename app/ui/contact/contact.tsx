@@ -15,7 +15,7 @@ export default function ContactSection() {
       <h2>Contact me!</h2>
       <div className={styles.iconsWrapper}>
         <Link
-          href="https://github.com/Areszka"
+          href="https://github.com/agnieszka-grabowska"
           target="_blank"
           className={styles.icon}
           aria-label="github"

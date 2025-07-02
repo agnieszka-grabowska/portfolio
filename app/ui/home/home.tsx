@@ -40,7 +40,11 @@ export default function HomeSection() {
           </div>
           <Flex gap="6px">
             <Button href="mailto:grabowskaagnieszka025@gmail.com">Email me</Button>
-            <Button icon={FiGithub} href="https://github.com/Areszka" aria-label="github" />
+            <Button
+              icon={FiGithub}
+              href="https://github.com/agnieszka-grabowska"
+              aria-label="github"
+            />
             <Button
               icon={FiLinkedin}
               href="https://www.linkedin.com/in/agnieszka-grabowska-b8037420a/"
