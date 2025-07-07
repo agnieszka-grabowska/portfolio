@@ -1,22 +1,11 @@
 "use client";
-import yookosPhoto from "@/public/yookos.avif";
-import tetrisPhoto from "@/public/tetris.avif";
-import chillPhoto from "@/public/dance-school-chill.avif";
-import jetlagPhoto from "@/public/jetlag-game-view.avif";
+
+import tetrisPhoto from "@/public/preview-tetris.avif";
+import chillPhoto from "@/public/preview-dance-school-chill.avif";
+import botcPhoto from "@/public/preview-botc-companion.avif";
+import jetlagPhoto from "@/public/preview-jetlag-poznan.avif";
 import styles from "./projects.module.css";
 import Project from "./project";
-import {
-  TbBrandTypescript,
-  TbBrandCss3,
-  TbBrandFlutter,
-  TbBrandGit,
-  TbBrandHtml5,
-  TbBrandReact,
-  TbBrandFigma,
-  TbBrandNextjs,
-  TbBrandPrisma,
-} from "react-icons/tb";
-import { SiPrismic } from "react-icons/si";
 import useObserver from "../useObserver";
 
 export default function ProjectsSection() {
@@ -24,10 +13,10 @@ export default function ProjectsSection() {
 
   return (
     <section className={styles.projects} id="projects" ref={projectsRef}>
-      <DanceSchoolChill />
       <Jetlag />
+      <DanceSchoolChill />
+      <BloodOnTheClocktower />
       <Tetris />
-      <Yookos />
     </section>
   );
 }
@@ -36,36 +25,38 @@ function DanceSchoolChill() {
   return (
     <Project
       title="Dance School Chill"
-      href="https://szkola-tanca-chill.vercel.app"
+      githubLink="https://github.com/agnieszka-grabowska/szkola-tanca-chill"
+      liveDemoLink="https://szkola-tanca-chill.vercel.app"
       description="Landing page for a dance school, featuring information about classes, instructor, and contact details."
       src={chillPhoto}
       alt=""
-      icons={[
-        { icon: TbBrandNextjs, hoverColor: "#a4a4a4", title: "Next.js" },
-        { icon: TbBrandTypescript, hoverColor: "#3178c6", title: "TypeScript" },
-        { icon: TbBrandCss3, hoverColor: "#264DE4", title: "CSS3" },
-        { icon: TbBrandHtml5, hoverColor: "#E34F26", title: "HTML5" },
-        { icon: SiPrismic, hoverColor: "#8e44ec", title: "Prismic" },
+      technologies={[
+        { hoverColor: "#a4a4a4", title: "Next.js" },
+        { hoverColor: "#3178c6", title: "TypeScript" },
+        { hoverColor: "#264DE4", title: "CSS3" },
+        { hoverColor: "#E34F26", title: "HTML5" },
+        { hoverColor: "#8e44ec", title: "Prismic" },
+        { hoverColor: "#A259FF", title: "Figma" },
       ]}
-      titleGradient={"var(--chill-gradient"}
     />
   );
 }
 
-function Yookos() {
+function BloodOnTheClocktower() {
   return (
     <Project
-      title="Yookos"
-      href="https://app.yookos.com"
-      description="A social media platform where you can create personalized spaces, share custom posts, and build communities. It also features a marketplace for buying and selling items."
-      src={yookosPhoto}
+      title="Blood on the Clocktower Companion"
+      githubLink="https://github.com/agnieszka-grabowska/blood-on-the-clocktower"
+      liveDemoLink="https://blood-on-the-clocktower-ten.vercel.app"
+      description="A login-free player and character management app created in just a few days for a friend’s game gathering. It allows random or manual character assignment, provides character descriptions, and saves all data locally in the browser for easy access."
+      src={botcPhoto}
       alt=""
-      icons={[
-        { icon: TbBrandFlutter, hoverColor: "#027DFD", title: "Flutter" },
-        { icon: TbBrandFigma, hoverColor: "#A259FF", title: "Figma" },
-        { icon: TbBrandGit, hoverColor: "#f14e32", title: "Git" },
+      technologies={[
+        { hoverColor: "#a4a4a4", title: "Next.js" },
+        { hoverColor: "#3178c6", title: "TypeScript" },
+        { hoverColor: "#264DE4", title: "CSS3" },
+        { hoverColor: "#E34F26", title: "HTML5" },
       ]}
-      titleGradient={"var(--yookos-gradient"}
     />
   );
 }
@@ -74,18 +65,18 @@ function Tetris() {
   return (
     <Project
       title="Tetris"
-      href="https://awesometetris.netlify.app"
+      githubLink="https://github.com/agnieszka-grabowska/Tetris"
+      liveDemoLink="https://awesometetris.netlify.app"
       description="A simplified version of the classic game where you strategically place and rotate shapes to clear lines and score points."
       src={tetrisPhoto}
       alt=""
-      icons={[
-        { icon: TbBrandReact, hoverColor: "#61DAFB", title: "React" },
-        { icon: TbBrandTypescript, hoverColor: "#3178c6", title: "TypeScript" },
-        { icon: TbBrandCss3, hoverColor: "#264DE4", title: "CSS3" },
-        { icon: TbBrandHtml5, hoverColor: "#E34F26", title: "HTML5" },
-        { icon: TbBrandGit, hoverColor: "#f14e32", title: "Git" },
+      technologies={[
+        { hoverColor: "#61DAFB", title: "React" },
+        { hoverColor: "#3178c6", title: "TypeScript" },
+        { hoverColor: "#264DE4", title: "CSS3" },
+        { hoverColor: "#E34F26", title: "HTML5" },
+        { hoverColor: "#f14e32", title: "Git" },
       ]}
-      titleGradient={"var(--tetris-gradient"}
     />
   );
 }
@@ -94,20 +85,20 @@ function Jetlag() {
   return (
     <Project
       title="Jet Lag Poznań"
-      href="/projects/jetlag"
+      githubLink="https://github.com/agnieszka-grabowska/jetlag-poznan"
+      liveDemoLink="https://jetlag-poznan.vercel.app"
+      projectOverviewLink="projects/jetlag"
       description="An application providing an interface to play the Jet Lag game, where you can create teams, ask questions, and cast curses."
       src={jetlagPhoto}
       alt=""
-      icons={[
-        { icon: TbBrandNextjs, hoverColor: "#a4a4a4", title: "Next.js" },
-        { icon: TbBrandTypescript, hoverColor: "#3178c6", title: "TypeScript" },
-        { icon: TbBrandCss3, hoverColor: "#264DE4", title: "CSS3" },
-        { icon: TbBrandHtml5, hoverColor: "#E34F26", title: "HTML5" },
-        { icon: TbBrandPrisma, hoverColor: "#16a394", title: "Prisma" },
-        { icon: TbBrandGit, hoverColor: "#f14e32", title: "Git" },
+      technologies={[
+        { hoverColor: "#a4a4a4", title: "Next.js" },
+        { hoverColor: "#3178c6", title: "TypeScript" },
+        { hoverColor: "#264DE4", title: "CSS3" },
+        { hoverColor: "#E34F26", title: "HTML5" },
+        { hoverColor: "#16a394", title: "Prisma" },
+        { hoverColor: "#f14e32", title: "Git" },
       ]}
-      titleGradient={"var(--jetlag-gradient"}
-      detailsPageExists={true}
     />
   );
 }

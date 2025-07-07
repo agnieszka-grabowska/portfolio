@@ -1,28 +1,4 @@
 :root {
-  --primary-gradient: linear-gradient(
-    55deg,
-    hsl(239deg 95% 49%) 0%,
-    hsl(272deg 88% 50%) 50%,
-    hsl(306deg 81% 51%) 100%
-  );
-
-  --tetris-gradient: linear-gradient(
-    45deg,
-    hsl(102deg 63% 56%) 0%,
-    hsl(45deg 100% 37%) 52%,
-    hsl(4deg 60% 49%) 100%
-  );
-  --yookos-gradient: linear-gradient(
-    45deg,
-    hsl(256deg 64% 64%) 0%,
-    hsl(195deg 100% 47%) 52%,
-    hsl(146deg 56% 63%) 100%
-  );
-
-  --chill-gradient: linear-gradient(45deg, hsl(8, 64%, 41%) 0%, hsl(47, 82%, 49%) 100%);
-
-  --jetlag-gradient: linear-gradient(45deg, hsl(144, 73%, 40%) 0%, hsl(219, 83%, 50%) 100%);
-
   --light-mode-background: #f6f6f6;
 
   --main: #4177ba;
