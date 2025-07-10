@@ -2,7 +2,7 @@
   background-color: var(--background);
   border-bottom: var(--nav-border) solid 1px;
   display: grid;
-  gap: 16px;
+  gap: 0px 16px;
   grid-template-columns: 140px 1fr 140px;
   padding: 4px 16px;
   align-items: center;
@@ -12,4 +12,26 @@
   left: 0;
   z-index: 1;
   min-height: 3.75rem;
+  grid-template-areas: "logo nav theme";
+}
+
+.header > *:first-child {
+  grid-area: logo;
+}
+
+.header > *:nth-child(2) {
+  grid-area: nav;
+}
+
+.header > *:last-child {
+  grid-area: theme;
+}
+
+@media (max-width: 790px) {
+  .header {
+    grid-template-columns: 140px 1fr;
+    grid-template-areas:
+      "logo theme"
+      "nav nav";
+  }
 }

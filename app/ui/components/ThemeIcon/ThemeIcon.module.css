@@ -5,6 +5,7 @@
   cursor: pointer;
   justify-self: end;
   padding: 16px;
+  margin-inline-end: -16px;
   transition: transform 300ms ease;
 }
 

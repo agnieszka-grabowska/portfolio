@@ -5,15 +5,6 @@
   color: var(--text-primary);
 }
 
-@media (max-width: 790px) {
-  .header {
-    grid-template-columns: 140px 1fr;
-  }
-  .nav {
-    justify-self: flex-end;
-  }
-}
-
 .items {
   display: flex;
   gap: 40px;
